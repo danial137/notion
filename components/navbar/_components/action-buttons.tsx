@@ -2,12 +2,13 @@
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { X } from "lucide-react"
+import { AlignJustify, X } from "lucide-react"
+import  DropDownMenu  from "./drop-down-menu"
 
 const ActionButton = () => {
-    const [isdropdown, setisdropdown] = useState(false)
-    const toggleDropdown = () => setisdropdown(!isdropdown)
-    const closedropdown = () => setisdropdown(!isdropdown)
+    const [isDropdown, setisDropdown] = useState(false)
+    const toggleDropdown = () => setisDropdown(!isDropdown)
+    const closeDropdown = () => setisDropdown(false)
     return (
         <div className="pr-2">
             <div className="items-center justify-center flex">
@@ -23,9 +24,22 @@ const ActionButton = () => {
                     </div>
                     <div className="flex lg:space-x-4 items-center pr-4">
                         <div>
-                            <Button  className="hidden lg:flex items-center border-none text-md"> Get Bird  Free </Button>
+                            <Button className="hidden lg:flex items-center border-none text-md"> Get Bird  Free </Button>
                         </div>
                     </div>
+                    {isDropdown && (
+                        <div onClick={toggleDropdown}
+                            className="rounded-full xl:hidden" >
+
+                            <X className="h-5 w-5 items-center justify-center" />
+
+                        </div>)}
+                    {!isDropdown && (
+                        <div onClick={toggleDropdown} className="flex lg:hidden">
+                            <AlignJustify className="h-5 w-5 items-center justify-center"/>
+                        </div>
+                    )}
+                    {!isDropdown && <DropDownMenu/>}
                 </div>
             </div>
         </div>
