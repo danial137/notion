@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { AlignJustify, X } from "lucide-react"
-import  DropDownMenu  from "./drop-down-menu"
+import DropDownMenu from "./drop-down-menu"
 
 const ActionButton = () => {
     const [isDropdown, setisDropdown] = useState(false)
@@ -36,10 +36,10 @@ const ActionButton = () => {
                         </div>)}
                     {!isDropdown && (
                         <div onClick={toggleDropdown} className="flex lg:hidden">
-                            <AlignJustify className="h-5 w-5 items-center justify-center"/>
+                            <AlignJustify className="h-5 w-5 items-center justify-center" />
                         </div>
                     )}
-                    {!isDropdown && <DropDownMenu/>}
+                    {!isDropdown && <DropDownMenu onClose={closeDropdown} />}
                 </div>
             </div>
         </div>
