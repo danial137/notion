@@ -36,10 +36,10 @@ const ActionButton = () => {
                         </div>)}
                     {!isDropdown && (
                         <div onClick={toggleDropdown} className="flex lg:hidden">
-                            <AlignJustify className="h-5 w-5 items-center justify-center" />
+                            <AlignJustify className="h-5 w-5 items-center justify-center mr-2" />
                         </div>
                     )}
-                    {!isDropdown && <DropDownMenu onClose={closeDropdown} />}
+                    {isDropdown && <DropDownMenu onClose={closeDropdown} />}
                 </div>
             </div>
         </div>

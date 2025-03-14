@@ -8,7 +8,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     }
     
     return (
-        <div className="lg:hidden">
+        <div className="w-screen h-screen bg-white px-4 items-center justify-center absolute right-0 xl:hidden">
             this is drop down menu
         </div>
     )
