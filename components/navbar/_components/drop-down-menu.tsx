@@ -1,3 +1,11 @@
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
+
 interface DropDownMenuProps {
     onClose: () => void;
 }
