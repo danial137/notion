@@ -41,7 +41,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
                         className="space-y-2">
                         <Link href="/eccomerce" className="flex" onClick={handleLinkClick}>
                             <div>
-                                <BarChart className="h-6 w-6 mr-2 text-orange-400"/>
+                                <BarChart className="h-6 w-6 mr-2 text-orange-400" />
                             </div>
                             <div>BarChart</div>
                         </Link>
@@ -235,18 +235,27 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
                 </AccordionItem>
 
                 <Link href={"/"}
-                    className="flex flex-1 justify-between items-center border-b py-4"
+                    className="flex flex-1 justify-between items-center border-b py-6"
                 >
-                    pricing 
+                    pricing
                 </Link>
 
-                <Link href={"/"}
-                    className="flex flex-1 justify-between items-center border-b py-4"
+                <Link href={"/contact-sales"}
+                    className="flex flex-1 justify-between items-center border-b py-6"
                 >
-                    request a demo 
+                    request a demo
                 </Link>
 
             </Accordion>
+
+            <div className="pt-12">
+                <div className="space-y-4 flex flex-col px-4">
+                    <Button className="w-full">Get Bird Free</Button>
+                </div>
+                <div className="space-y-4 flex flex-col px-4 mt-4">
+                    <Button className="w-full" variant={"outline"}> log in </Button>
+                </div>
+            </div>
         </div>
     )
 }
