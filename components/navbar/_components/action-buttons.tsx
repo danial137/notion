@@ -16,6 +16,10 @@ const ActionButton = () => {
                     <Link href="/contact-sales" className="hidden lg:flex items-center">
                         <div>request a demo</div>
                     </Link>
+                    <div className="font-thin     
+        lg:flex
+            items-center
+            hidden">|</div>
                     <div className="font-thin lg-flex items-flex hidden">|</div>
                     <div className="flex lg:space-x-4 items-center pr-4">
                         <div>
