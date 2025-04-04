@@ -216,8 +216,6 @@ const HeroSection = () => {
                 </div>
 
 
-
-
             ) : (
                 <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
                     {tabs.map((tab) => (
