@@ -5,12 +5,12 @@ import ThirdSection from "./third-section";
 const landingPage = () => {
   return (
     <div>
-
       <Navbar />
       <HeroSection />
       <SecondSection />
       <ThirdSection />
 
+   
     </div>
   )
 }
