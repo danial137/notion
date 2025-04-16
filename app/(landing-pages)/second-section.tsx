@@ -14,12 +14,9 @@ const logos = [
     { image: '/logos/logoipsum-325.svg' },
     { image: '/logos/logoipsum-327.svg' },
     { image: '/logos/logoipsum-329.svg' },
-    { image: '/logos/logoipsum-330.svg' },
-    { image: '/logos/logoipsum-331.svg' },
-    { image: '/logos/logoipsum-332.svg' },
-
-
-
+    { image: '/logos/logoipsum-300.svg' },
+    { image: '/logos/logoipsum-311.svg' },
+    { image: '/logos/logoipsum-317.svg' },
 
 ]
 
@@ -36,10 +33,14 @@ const SecondSection = () => {
                 read custom stories <PiArrowRight className='ml-3 text-sm' />
             </div>
 
-            {
-                <div className='grid grid-cols-3 xl:grid-cols-4 items-center justify-center px-10 md:px-20 lg:px-0'>
+            {<div className='grid grid-cols-3 xl:grid-cols-4 items-center justify-center px-10 md:px-20 lg:px-0 lg:w1/2 pt-10 gap-10 text-center mx-auto'>
+                {logos.map((logo, index) => (
+                    <div key={index}>
+                        <Image src={logo.image} alt='logo' width={200} height={200} className='w-24'/>
+                    </div>
 
-                </div>
+                ))}
+            </div>
             }
         </div>
     );
